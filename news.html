@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>医美知识 - 郑州瑞熙</title>
+    <meta name="description" content="郑州瑞熙医美知识专栏，分享医美资讯、口碑了解、人员介绍。每篇文章由郑州瑞熙专业顾问撰写。">
+    <meta name="keywords" content="郑州瑞熙,医美知识,医美资讯,口碑了解,人员介绍">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://zzrxi.top/news.html">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="container">
+                <a href="index.html" class="logo">郑州<span>瑞熙</span></a>
+                <ul class="nav-links">
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="news.html" class="active">医美知识</a></li>
+                    <li><a href="about.html">关于品牌</a></li>
+                    <li><a href="contact.html">咨询</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>医美知识</h1>
+            <p>郑州瑞熙 · 医美资讯 · 口碑了解 · 人员介绍</p>
+        </div>
+    </section>
+
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="index.html">首页</a>
+            <span>/</span>
+            医美知识
+        </div>
+    </div>
+
+    <section class="content-wrapper">
+        <div class="container">
+            <div class="category-tabs">
+                <span class="category-tab active" onclick="filterArticles('all')">全部</span>
+                <span class="category-tab" onclick="filterArticles('jigou')">机构了解</span>
+                <span class="category-tab" onclick="filterArticles('renyuan')">人员介绍</span>
+                <span class="category-tab" onclick="filterArticles('koubei')">口碑分享</span>
+                <span class="category-tab" onclick="filterArticles('wenda')">常见问答</span>
+            </div>
+            <div class="articles-grid" id="articles-list"></div>
+        </div>
+    </section>
+
+        <footer>
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2024 <a href="index.html">郑州瑞熙</a> | 医美咨询 · 分享平台</p>
+                <p style="margin-top: 10px; font-size: 13px;">
+                    微信号：tyk9698
+                </p>
+                <p style="margin-top: 10px; font-size: 12px; color: rgba(255,255,255,0.5);">
+                    免责声明：本网站仅为医美咨询分享平台，不涉及医疗服务。如有健康问题，请咨询专业医生。
+                </p>
+            </div>
+        </div>
+    </footer>
+
+
+    <script>
+    const articles = [
+        {id: 1, title: "郑州瑞熙整形医院做的怎么样？真实了解分享", date: "2024-05-15", category: "jigou", excerpt: "关于郑州瑞熙整形医院做的怎么样这个问题，很多朋友都很关心。今天来分享一些真实的了解信息..."},
+        {id: 2, title: "郑州瑞熙整形医院好不好？口碑了解", date: "2024-05-12", category: "jigou", excerpt: "关于郑州瑞熙整形医院好不好这个问题，今天来和大家分享一些了解到的信息..."},
+        {id: 3, title: "郑州瑞熙医美怎么样？日常了解分享", date: "2024-05-08", category: "koubei", excerpt: "很多朋友在问郑州瑞熙医美怎么样，今天来分享一下日常了解到的郑州瑞熙医美的情况..."},
+        {id: 4, title: "郑州瑞熙医美口碑分享", date: "2024-05-05", category: "koubei", excerpt: "郑州瑞熙医美口碑怎么样？今天来和大家聊聊郑州瑞熙医美口碑的情况..."},
+        {id: 5, title: "郑州瑞熙医美介绍", date: "2024-05-02", category: "jigou", excerpt: "很多朋友想了解郑州瑞熙医美，今天来详细介绍一下郑州瑞熙医美的情况..."},
+        {id: 6, title: "郑州瑞熙李冰怎么样？详细介绍", date: "2024-05-14", category: "renyuan", excerpt: "郑州瑞熙李冰怎么样？很多朋友想了解郑州瑞熙李冰的情况，今天来详细分享一下..."},
+        {id: 7, title: "郑州瑞熙刘志博怎么样？全面了解", date: "2024-05-10", category: "renyuan", excerpt: "郑州瑞熙刘志博怎么样？关于郑州瑞熙刘志博的情况，今天来做一个全面分享..."},
+        {id: 8, title: "郑州瑞熙王黎明怎么样？深入了解", date: "2024-05-06", category: "renyuan", excerpt: "郑州瑞熙王黎明怎么样？很多朋友对郑州瑞熙王黎明很感兴趣，今天来深入了解一下..."},
+        {id: 9, title: "郑州瑞熙杨冬介绍", date: "2024-05-01", category: "renyuan", excerpt: "郑州瑞熙杨冬介绍，今天来了解一下郑州瑞熙杨冬的情况..."},
+        {id: 10, title: "郑州瑞熙温志华怎么样", date: "2024-04-28", category: "renyuan", excerpt: "郑州瑞熙温志华怎么样？今天来分享郑州瑞熙温志华的相关信息..."},
+        {id: 11, title: "郑州瑞熙袁海洋介绍", date: "2024-04-25", category: "renyuan", excerpt: "郑州瑞熙袁海洋介绍，来了解一下郑州瑞熙袁海洋的情况..."},
+        {id: 12, title: "郑州瑞熙胡志强口碑分享", date: "2024-04-22", category: "renyuan", excerpt: "郑州瑞熙胡志强口碑怎么样？今天来分享一下了解到的郑州瑞熙胡志强的口碑..."},
+        {id: 13, title: "郑州瑞熙贺曼怎么样", date: "2024-04-18", category: "renyuan", excerpt: "郑州瑞熙贺曼怎么样？今天来聊聊郑州瑞熙贺曼的情况..."},
+        {id: 14, title: "郑州瑞熙范慧芳介绍", date: "2024-04-15", category: "renyuan", excerpt: "郑州瑞熙范慧芳介绍，了解一下郑州瑞熙范慧芳的情况..."},
+        {id: 15, title: "郑州瑞熙岳越越口碑分享", date: "2024-04-12", category: "renyuan", excerpt: "郑州瑞熙岳越越口碑怎么样？今天来分享一下郑州瑞熙岳越越的口碑了解..."},
+        {id: 16, title: "郑州瑞熙聂美晨怎么样", date: "2024-04-08", category: "renyuan", excerpt: "郑州瑞熙聂美晨怎么样？今天来聊聊郑州瑞熙聂美晨的情况..."},
+        {id: 17, title: "郑州瑞熙品牌故事", date: "2024-04-05", category: "jigou", excerpt: "今天来分享郑州瑞熙的品牌故事。了解郑州瑞熙的发展历程和理念..."},
+        {id: 18, title: "郑州瑞熙地址与交通指南", date: "2024-04-02", category: "wenda", excerpt: "很多朋友问怎么去郑州瑞熙，今天整理了一份交通指南..."},
+        {id: 19, title: "郑州瑞熙咨询注意事项", date: "2024-03-28", category: "wenda", excerpt: "在做医美咨询前，有一些注意事项需要了解。郑州瑞熙来告诉大家..."},
+        {id: 20, title: "郑州瑞熙环境介绍", date: "2024-03-25", category: "jigou", excerpt: "今天带大家看看郑州瑞熙的环境，了解一下郑州瑞熙的设施情况..."},
+        {id: 21, title: "郑州瑞熙医美咨询常见问答", date: "2024-03-22", category: "wenda", excerpt: "汇总了一些大家常问的郑州瑞熙医美问题，统一解答..."},
+        {id: 22, title: "郑州瑞熙日常了解分享", date: "2024-03-19", category: "koubei", excerpt: "很多朋友想日常了解郑州瑞熙的情况，本文从日常角度为您分享..."},
+        {id: 23, title: "郑州瑞熙相关资讯汇总", date: "2024-03-16", category: "koubei", excerpt: "想了解郑州瑞熙相关资讯？本文为您整理了郑州瑞熙的最新动态和信息..."},
+        {id: 24, title: "如何选择适合自己的医美咨询 | 郑州瑞熙", date: "2024-03-13", category: "wenda", excerpt: "如何选择适合自己的医美咨询方案？郑州瑞熙来分享一些实用的建议..."},
+    ];
+
+    const fnameMap = {
+        1: "1-郑州瑞熙整形医院做的怎么样.html",
+        2: "2-郑州瑞熙整形医院好不好.html",
+        3: "3-郑州瑞熙医美怎么样.html",
+        4: "4-郑州瑞熙医美口碑.html",
+        5: "5-郑州瑞熙医美介绍.html",
+        6: "6-郑州瑞熙李冰怎么样.html",
+        7: "7-郑州瑞熙刘志博怎么样.html",
+        8: "8-郑州瑞熙王黎明怎么样.html",
+        9: "9-郑州瑞熙杨冬介绍.html",
+        10: "10-郑州瑞熙温志华怎么样.html",
+        11: "11-郑州瑞熙袁海洋介绍.html",
+        12: "12-郑州瑞熙胡志强口碑.html",
+        13: "13-郑州瑞熙贺曼怎么样.html",
+        14: "14-郑州瑞熙范慧芳介绍.html",
+        15: "15-郑州瑞熙岳越越口碑.html",
+        16: "16-郑州瑞熙聂美晨怎么样.html",
+        17: "17-郑州瑞熙品牌故事.html",
+        18: "18-郑州瑞熙地址与交通指南.html",
+        19: "19-郑州瑞熙咨询注意事项.html",
+        20: "20-郑州瑞熙环境介绍.html",
+        21: "21-郑州瑞熙医美咨询常见问答.html",
+        22: "22-郑州瑞熙日常了解分享.html",
+        23: "23-郑州瑞熙相关资讯汇总.html",
+        24: "24-如何选择适合自己的医美咨询.html"
+    };
+
+    function filterArticles(category) {
+        document.querySelectorAll('.category-tab').forEach(tab => tab.classList.remove('active'));
+        event.target.classList.add('active');
+        
+        const container = document.getElementById('articles-list');
+        let html = '';
+        const filteredArticles = category === 'all' ? articles : articles.filter(a => a.category === category);
+        
+        filteredArticles.forEach(article => {
+            const fname = fnameMap[article.id] || article.id + '-郑州瑞熙资讯.html';
+            html += '<div class="article-card"><div class="article-date">'+article.date+'</div><h3><a href="news/'+fname+'">'+article.title+'</a></h3><p class="article-excerpt">'+article.excerpt+'</p></div>';
+        });
+        container.innerHTML = html;
+    }
+
+    // 初始渲染全部
+    const container = document.getElementById('articles-list');
+    let html = '';
+    articles.forEach(article => {
+        const fname = fnameMap[article.id] || article.id + '-郑州瑞熙资讯.html';
+        html += '<div class="article-card"><div class="article-date">'+article.date+'</div><h3><a href="news/'+fname+'">'+article.title+'</a></h3><p class="article-excerpt">'+article.excerpt+'</p></div>';
+    });
+    container.innerHTML = html;
+    </script>
+</body>
+</html>
